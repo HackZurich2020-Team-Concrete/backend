@@ -28,7 +28,7 @@ userText='[{ "usersId":1, "name":"Katja J Gerste", "Address:":"Bayreuther Stra
     '{ "usersId":3,"name":"Heike J Gruenewald", "Address:":"Genslerstraße 65,13587","phoneNumber":"030 29 83297","Email":"3x9r9s1wqy4@temporary-mail.net"},'+\
     '{ "usersId":4,"name":"Kristin M Huber", "Address:":"Leopoldstraße 76,13503","phoneNumber":"030 64 81370","Email":"n2i3ezfnm4k@temporary-mail.net"},'+\
     '{ "usersId":5,"name":"Ralf N Schweitzer", "Address:":"Genslerstraße 3,12103","phoneNumber":"030 54 82903","Email":"3x9r9s1wqy4@temporary-mail.net"},'+\
-    '{ "usersId":6,"name":"Thomas Schulz", "Address:":"Rhinstrasse 44,80714","phoneNumber":"089 89 75728","Email":"svc5y2d3goj@temporary-mail.net"},'+\
+    '{ "usersId":6,"name":"Thomas Schulz", "Address:":"Rhinstrasse 44,80714","phoneNumber":"089 89 75728","Email":"svc5y2d3goj@temporary-mail.net"}'+\
         ']'
 
 # parse users:
