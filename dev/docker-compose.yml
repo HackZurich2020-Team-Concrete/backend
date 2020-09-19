@@ -1,0 +1,12 @@
+version: "3"
+services:
+  backend-dev:
+    container_name: backend-dev
+    build:
+      context: ../
+      dockerfile: ./dev/Dockerfile
+    volumes:
+      - ../:/app
+      - ../instance/config.dev.py:/app/instance/config.py
+    ports:
+      - 5000:5000
