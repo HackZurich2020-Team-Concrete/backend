@@ -6,8 +6,6 @@ from flask import current_app,jsonify
 from . import api_bp
 
 
-r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
-
 demanRequestersText =  '[{"id":1,"userId":5,"locationN":48.75958376,"locationE":9.16500092,"startDate":"2020-09-04","endDate":"2020-09-27","amount":8.65,"type":"normal","chunkSize":"enormous","model":"demander"},{"id":2,"userId":29,"locationN":48.81206377,"locationE":9.15470123,"startDate":"2020-09-04","endDate":"2020-09-27","amount":3.65,"type":"normal","chunkSize":"enormous","model":"demander"},'+\
 '{"id":3,"userId":4,"locationN":48.74079525,"locationE":9.30747986,"startDate":"2020-09-04","endDate":"2020-09-27","amount":4,"type":"normal","chunkSize":"enormous","model":"demander"}'+\
 ']'
@@ -41,7 +39,7 @@ app = Flask(__name__)
 
 @api_bp.route('/')
 def index():
-    return jsonify(r.text)
+    return jsonify({})
 
 @api_bp.route('/getAll')
 def getAlls():
