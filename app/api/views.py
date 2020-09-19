@@ -55,7 +55,7 @@ def getRequesters():
 def show_post(requester_id):
     found = []
     for requester in requesters:
-        if requester["demandRequestID"] == requester_id:
+        if requester["id"] == requester_id:
             found.append(requester)
     return jsonify(found)
 
@@ -65,7 +65,7 @@ def deleteRequester(requester_id):
     temp = []
     while requesters:
         x = requesters.pop()
-        if x["demandRequestID"] != requester_id:
+        if x["id"] != requester_id:
             temp.append(x)
     while temp:
         requesters.append(temp.pop())
@@ -87,7 +87,7 @@ def getLogistics():
 def show_logistic(requester_id):
     found = []
     for requester in logisticSuppliers:
-        if requester["logisticID"] == requester_id:
+        if requester["id"] == requester_id:
             found.append(requester)
     return jsonify(found)
 
@@ -97,7 +97,7 @@ def deleteLogistic(requester_id):
     temp = []
     while logisticSuppliers:
         x = logisticSuppliers.pop()
-        if x["logisticID"] != requester_id:
+        if x["id"] != requester_id:
             temp.append(x)
     while temp:
         logisticSuppliers.append(temp.pop())
@@ -118,7 +118,7 @@ def getSuppliers():
 def show_supplier(requester_id):
     found = []
     for requester in suplyOffers:
-        if requester["offerId"] == requester_id:
+        if requester["id"] == requester_id:
             found.append(requester)
     return jsonify(found)
 
@@ -128,7 +128,7 @@ def deleteSupplier(requester_id):
     temp = []
     while suplyOffers:
         x = suplyOffers.pop()
-        if x["offerId"] != requester_id:
+        if x["id"] != requester_id:
             temp.append(x)
     while temp:
         suplyOffers.append(temp.pop())
@@ -149,7 +149,7 @@ def getSUsers():
 def show_user(requester_id):
     found = []
     for requester in users:
-        if requester["usersId"] == requester_id:
+        if requester["id"] == requester_id:
             found.append(requester)
     return jsonify(found)
 
@@ -159,7 +159,7 @@ def deleteUser(requester_id):
     temp = []
     while users:
         x = users.pop()
-        if x["usersId"] != requester_id:
+        if x["id"] != requester_id:
             temp.append(x)
     while temp:
         users.append(temp.pop())
