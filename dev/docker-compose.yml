@@ -8,5 +8,11 @@ services:
     volumes:
       - ../:/app
       - ../instance/config.dev.py:/app/instance/config.py
+    networks:
+      - concrete-net
     ports:
       - 5000:5000
+
+networks:
+  concrete-net:
+    external: true
