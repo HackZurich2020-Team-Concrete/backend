@@ -1,5 +1,5 @@
 from flask import Flask
-
+from flask import request
 import requests
 import json
 from flask import current_app,jsonify
@@ -45,7 +45,13 @@ def index():
 def getAlls():
     return jsonify(requesters+suplyOffers+logisticSuppliers)
 
+@api_bp.route('/calculate')
+def calculate():
 
+    r = requests.post('http://logistic_optimization:8080/calculate', json={"demanders": requesters,"suppliers":suplyOffers})
+    
+    return jsonify(r.json())
+       # return requests.post('http://127.0.0.1:8080/test2', json={"demanders": requesters,"suppliers":suplyOffers})
 
 @api_bp.route('/getRequesters')
 def getRequesters():
